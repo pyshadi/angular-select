@@ -29,7 +29,7 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-- None
+- Configuration issue with Webpack since Angular handles most of the Webpack configuration internally.
 
 ## Release Notes
 
