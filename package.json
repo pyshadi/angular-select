@@ -1,0 +1,43 @@
+{
+  "name": "angular-test-isolator",
+  "displayName": "Angular Test Isolator",
+  "description": "A tool to test specific Angular components or services in isolation",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.58.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.testAngularComponents"
+  ],
+  "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/angular-test-isolator.git"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.testAngularComponents",
+        "title": "Test Angular Components"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext .ts",
+    "test": "node ./out/test/extension.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@types/vscode": "^1.58.0",
+    "typescript": "^4.2.3",
+    "eslint": "^7.22.0",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "ts-node": "^9.1.1",
+    "vsce": "^1.91.0"
+  }
+}
